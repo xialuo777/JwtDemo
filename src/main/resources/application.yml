@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ssm_db
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: 12345
+
+  jpa:
+    hibernate:
+      ddl-auto: update   #启动自动更新数据库匹配实体类，不会创建新表
+      open-in-view: false  #指定Spring是否应该在视图渲染之前打开EntityManager，默认为true
+
+security:
+  jwt:
+    secret: 3cfa76ef14937c1c0ea519f8fc057a80fcd04a7420f8e8bcd0a7567c272e007b
+    expiration: 86400
+
